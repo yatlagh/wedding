@@ -7460,8 +7460,8 @@ html, body {
 @media only screen and (max-width: 900px) {
 #Top_bar #logo img {
 	vertical-align: middle;
-	max-height: 80px;
-	margin-top: -10px;
+	max-height: 90px;
+	margin-top: -20px;
 	position: absolute;
 	z-index: 99999999999;
 	right: 93%;
