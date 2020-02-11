@@ -126,7 +126,32 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-body">
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdJdIBPMuUvd9XViDVRYnI51p7n-dMetxB9UrnYTu_VARYWaw/viewform?embedded=true" width="640" height="947" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>      </div>
+        <h4 class="text-center">Contact Form</h4>
+<div class="form-group">
+  <label for="Name">Full Name</label>
+  <input
+  type="text"
+  name="Full Name"
+  id="userFullName"
+  class="form-control"
+  />
+</div>
+<div class="form-group">
+  <label for="Email">Email</label>
+  <input type="Email" name="Email" id="userEmail" class="form-control" />
+</div>
+<div class="form-group">
+  <label for="Message">Message</label>
+<textarea
+ name="Message"
+ id="userMessage"
+ class="form-control" 
+></textarea>
+</div>
+
+<button id="submit" class="btn btn-primary" data-dismiss="modal">Submit</button>
+</div>
+   </div>
     </div>
   </div>
 </div>
@@ -254,8 +279,10 @@
     </div>
 
     <!-- JS -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-firestore.js"></script>
+  <script src="js/main.js"></script>
     <script src="js/jquery-2.1.4.min.js"></script>
-
     <script src="js/mfn.menu.js"></script>
     <script src="js/jquery.plugins.js"></script>
     <script src="js/jquery.jplayer.min.js"></script>
@@ -276,6 +303,12 @@
     <script src="plugins/rs-plugin-5.3.1/js/extensions/revolution.extension.parallax.min.js"></script>
 
     <script>
+    $('#button').submit(function(e) {
+    e.preventDefault();
+    // Coding
+    $('#exampleModalCenter').modal('toggle'); //or  $('#IDModal').modal('hide');
+    return false;
+});
         var revapi1, tpj;
       ( function() {
           if (!/loaded|interactive|complete/.test(document.readyState))
