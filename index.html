@@ -140,7 +140,7 @@
       <div class="modal-body">
         <h2 class="text-center">Merci de me confirmer votre présence</h2>
 <div id="namehere" class="form-group">
- <label for="Name"><h4>Nom</h4></label>
+ <label for="Name"><h4>Nom et prénom</h4></label>
   <input style="border: solid 1px black; width: 100%;" 
   type="text"
   name="Full Name"
@@ -149,7 +149,7 @@
   />
 </div>
 <div class="form-group field">
-  <label for="Email"><h4>Prénom</h4></label>
+  <label for="Email"><h4>Email</h4></label>
   <input style="border: solid 1px black; width: 100%;"  type="Email" name="Email" id="userEmail" class="form-control" />
 </div>
 <div id="parent-dv" class="form-group">
@@ -184,7 +184,7 @@
                                     <div class="mcb-wrap-inner">
                                         <div class="column mcb-column two-third column_column">
                                             <div class="column_attr clearfix">
-                                                <h2><span style="color: #c4a668; line-height:1em;">Le samedi 13 April 2020</span> <br>à sept heures quarante précieuse en la salle des fetes KZY EVENt.</h2>
+                                                <h2><span style="color: #c4a668; line-height:1em;">Le samedi 11 April 2020</span> <br>à sept heures quarante précieuse en la salle des fetes KZY EVENt.</h2>
                                             </div>
                                         </div>
 
@@ -315,12 +315,20 @@ $(document).ready(function() {
     });
 });
 
-$(document).ready(function(){
-  $('.actions button').click(function(){
-    $(".btn001").addClass("disabled");
-        $(".welcome").removeClass("disabled");
-  });
-});
+
+   $('.actions button').click(function(){
+
+         if ($(".welcome").hasClass("disabled")){
+
+           $('.welcome').removeClass('disabled');
+            $(".btn001").addClass("disabled");
+         }
+        
+       });
+
+
+
+   
 </script>
     <!-- JS -->
     <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
