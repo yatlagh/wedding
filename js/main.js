@@ -21,6 +21,7 @@ const submitBtn = document.querySelector('#submit');
 
 let userName = document.querySelector('#userFullName');
 let userEmail = document.querySelector('#userEmail');
+let userPnumber = document.querySelector('#userPnumber');
 let userMessage = document.querySelector('#userMessage');
 
 
@@ -29,13 +30,15 @@ const db = firestore.collection("contactData");
 submitBtn.addEventListener('click', function() {
 let userNameInput = userName.value;
 let userEmailInput = userEmail.value;
+let userPnumberInput = userPnumber.value;
 let userMessageInput = userMessage.value;
 
 db.doc()
 .set({
-  name: userNameInput,
-  email: userEmailInput,
-  message: userMessageInput
+  Name: userNameInput,
+  Email: userEmailInput,
+  Number: userPnumberInput,
+  Message: userMessageInput
 
 })
 .then(function() {
