@@ -33,7 +33,7 @@ let userEmailInput = userEmail.value;
 let userPnumberInput = userPnumber.value;
 let userMessageInput = userMessage.value;
 
-db.doc()
+db.doc(userNameInput)
 .set({
   Name: userNameInput,
   Email: userEmailInput,
